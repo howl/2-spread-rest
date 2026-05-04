@@ -34,3 +34,12 @@ const array2 = [4, 5, 6];
 const combineTwoArrays = (array1, array2) => [...array1, ...array2];
 
 console.log(combineTwoArrays(array1, array2)); // [1, 2, 3, 4, 5, 6]
+
+/**
+ * Ejercicio 5:
+ * Escriba una función llamada onlyUniques que acepte cualquier número de argumentos y devuelva un array de elementos únicos, sin repetidos.
+ */
+const onlyUniques = (...argumentos) => argumentos.filter((argumento, index, array) => array.indexOf(argumento) === index);
+
+console.log(onlyUniques("gato", "pollo", "cerdo", "cerdo")); //['gato', 'pollo', 'cerdo']
+console.log(onlyUniques(1, 1, 2, 2, 3, 6, 7, 8)); //[1, 2, 3, 6, 7, 8]
